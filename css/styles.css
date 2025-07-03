@@ -4239,40 +4239,44 @@ img.u-pull-left {
     }
 }
 
-/* Theme toggle button styling */
+/* Button styling */
 .theme-toggle-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    margin-left: 1em;
-    padding: 0.4em;
-    color: #f1c40f;
-    border-radius: 50%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 1em;
+  padding: 0.4em;
+  color: #f1c40f; /* yellow accent */
+  border-radius: 50%;
+  transition: color 0.3s;
+}
+.theme-toggle-btn:hover {
+  color: #f39c12;
 }
 
-/* Light mode (default) */
+/* Default (Light mode) - background unchanged */
+/* Only text color changes */
 body {
-    background: #fff;
-    color: #222;
-}
-h1, h2, h3, h4, h5, h6, .text-huge-title, .text-pretitle {
-    color: #fff !important; /* Headings/letters white in light mode */
+  /* Keep your existing background */
+  color: white; /* letters white in light mode */
 }
 
 /* Dark mode */
 body.dark-mode {
-    background: #181818;
-    color: #f1f1f1;
+  /* Keep your existing dark background */
+  color: yellow; /* letters yellow in dark mode */
 }
-body.dark-mode h1,
-body.dark-mode h2,
-body.dark-mode h3,
-body.dark-mode h4,
-body.dark-mode h5,
-body.dark-mode h6,
-body.dark-mode .text-huge-title,
-body.dark-mode .text-pretitle {
-    color: #ffe066 !important; /* Headings/letters yellow in dark mode */
+
+/* Optional: specifically target headings if needed */
+body {
+  /* For example, headings white in light mode */
+  --heading-color: white;
+}
+body.dark-mode {
+  --heading-color: yellow;
+}
+h1, h2, h3, h4, h5, h6, .text-huge-title, .text-pretitle {
+  color: var(--heading-color) !important;
 }
 
    
