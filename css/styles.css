@@ -4239,30 +4239,37 @@ img.u-pull-left {
     }
 }
 
- .theme-toggle-btn {
+.theme-toggle-btn {
     background: none;
     border: none;
     cursor: pointer;
-    padding: 0.5em;
     margin-left: 1em;
-    vertical-align: middle;
-    color: #222; /* or your header icon color */
+    padding: 0.4em;
+    color: var(--color-2); /* greenish accent */
     transition: color 0.3s;
+    border-radius: 50%;
 }
 .theme-toggle-btn:hover {
-    color: #f39c12; /* highlight on hover */
+    color: var(--color-1); /* yellow accent */
 }
 
-/* Example dark mode styles */
-body.dark-mode {
-    background: #181818;
-    color: #f1f1f1;
+/* Light (Little Colour) Theme */
+body.little-colour {
+    background: var(--color-1-lighter); /* very light yellow */
+    color: var(--color-2-dark); /* dark green for text */
 }
-body.dark-mode .s-header,
-body.dark-mode .s-footer {
-    background: #222;
+body.little-colour .s-header,
+body.little-colour .s-footer {
+    background: var(--color-1-light);
 }
-body.dark-mode a {
-    color: #f39c12;
+body.little-colour a {
+    color: var(--color-2-dark);
 }
+body.little-colour .btn {
+    background: var(--color-2-light);
+    color: var(--color-white);
+}
+
+/* Dark mode (default) uses your existing variables */
+
    
