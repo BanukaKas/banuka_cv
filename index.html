@@ -40,14 +40,33 @@
                 </nav>
             </div>
 
-            <!-- Theme Toggle Button -->
+<!-- Theme Toggle Button -->
 <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle color mode">
-    <!-- Sun and Moon SVG Icon (changes with theme) -->
-    <svg id="theme-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
-        <circle cx="12" cy="12" r="5" fill="currentColor"/>
-        <path id="theme-ray" d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2"/>
-    </svg>
+    <!-- Sun (default) and Moon (for dark) SVGs, shown/hidden by JS -->
+    <span id="icon-sun" style="display:inline;">
+        <!-- Sun SVG -->
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="5" fill="currentColor"/>
+            <g stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="1" x2="12" y2="3"/>
+                <line x1="12" y1="21" x2="12" y2="23"/>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                <line x1="1" y1="12" x2="3" y2="12"/>
+                <line x1="21" y1="12" x2="23" y2="12"/>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </g>
+        </svg>
+    </span>
+    <span id="icon-moon" style="display:none;">
+        <!-- Moon SVG -->
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z" fill="currentColor"/>
+        </svg>
+    </span>
 </button>
+
 
         </header>
 
@@ -416,34 +435,37 @@
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
 
-    <script>
+<script>
 document.addEventListener('DOMContentLoaded', function() {
     const btn = document.getElementById('theme-toggle');
-    const icon = document.getElementById('theme-icon');
-    const ray = document.getElementById('theme-ray');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    // Load saved theme or system preference
-    if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && prefersDark)) {
-        document.body.classList.add('dark-mode');
-        icon.style.color = '#f1c40f'; // moon color
-        ray.style.display = 'none';
+    const iconSun = document.getElementById('icon-sun');
+    const iconMoon = document.getElementById('icon-moon');
+
+    // Load saved theme
+    if (localStorage.getItem('theme') === 'little-colour') {
+        document.body.classList.add('little-colour');
+        iconSun.style.display = 'none';
+        iconMoon.style.display = 'inline';
     }
 
     btn.addEventListener('click', function() {
-        document.body.classList.toggle('dark-mode');
-        const isDark = document.body.classList.contains('dark-mode');
-        if (isDark) {
-            icon.style.color = '#f1c40f'; // moon color
-            ray.style.display = 'none';
+        if (document.body.classList.contains('little-colour')) {
+            // Switch to dark mode
+            document.body.classList.remove('little-colour');
+            iconSun.style.display = 'inline';
+            iconMoon.style.display = 'none';
             localStorage.setItem('theme', 'dark');
         } else {
-            icon.style.color = '#222'; // sun color
-            ray.style.display = '';
-            localStorage.setItem('theme', 'light');
+            // Switch to little colour (light)
+            document.body.classList.add('little-colour');
+            iconSun.style.display = 'none';
+            iconMoon.style.display = 'inline';
+            localStorage.setItem('theme', 'little-colour');
         }
     });
 });
 </script>
+
 
 </body>
 </html>
