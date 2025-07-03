@@ -4239,37 +4239,40 @@ img.u-pull-left {
     }
 }
 
+/* Theme toggle button styling */
 .theme-toggle-btn {
     background: none;
     border: none;
     cursor: pointer;
     margin-left: 1em;
     padding: 0.4em;
-    color: var(--color-2); /* greenish accent */
-    transition: color 0.3s;
+    color: #f1c40f;
     border-radius: 50%;
 }
-.theme-toggle-btn:hover {
-    color: var(--color-1); /* yellow accent */
+
+/* Light mode (default) */
+body {
+    background: #fff;
+    color: #222;
+}
+h1, h2, h3, h4, h5, h6, .text-huge-title, .text-pretitle {
+    color: #fff !important; /* Headings/letters white in light mode */
 }
 
-/* Light (Little Colour) Theme */
-body.little-colour {
-    background: var(--color-1-lighter); /* very light yellow */
-    color: var(--color-2-dark); /* dark green for text */
+/* Dark mode */
+body.dark-mode {
+    background: #181818;
+    color: #f1f1f1;
 }
-body.little-colour .s-header,
-body.little-colour .s-footer {
-    background: var(--color-1-light);
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode .text-huge-title,
+body.dark-mode .text-pretitle {
+    color: #ffe066 !important; /* Headings/letters yellow in dark mode */
 }
-body.little-colour a {
-    color: var(--color-2-dark);
-}
-body.little-colour .btn {
-    background: var(--color-2-light);
-    color: var(--color-white);
-}
-
-/* Dark mode (default) uses your existing variables */
 
    
