@@ -4238,3 +4238,31 @@ img.u-pull-left {
         right : 6vw;
     }
 }
+
+ .theme-toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5em;
+    margin-left: 1em;
+    vertical-align: middle;
+    color: #222; /* or your header icon color */
+    transition: color 0.3s;
+}
+.theme-toggle-btn:hover {
+    color: #f39c12; /* highlight on hover */
+}
+
+/* Example dark mode styles */
+body.dark-mode {
+    background: #181818;
+    color: #f1f1f1;
+}
+body.dark-mode .s-header,
+body.dark-mode .s-footer {
+    background: #222;
+}
+body.dark-mode a {
+    color: #f39c12;
+}
+   
