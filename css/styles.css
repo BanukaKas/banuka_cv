@@ -4238,3 +4238,45 @@ img.u-pull-left {
         right : 6vw;
     }
 }
+
+/* Button styling */
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 1em;
+  padding: 0.4em;
+  color: #f1c40f; /* yellow accent */
+  border-radius: 50%;
+  transition: color 0.3s;
+}
+.theme-toggle-btn:hover {
+  color: #f39c12;
+}
+
+/* Default (Light mode) - background unchanged */
+/* Only text color changes */
+body {
+  /* Keep your existing background */
+  color: white; /* letters white in light mode */
+}
+
+/* Dark mode */
+body.dark-mode {
+  /* Keep your existing dark background */
+  color: yellow; /* letters yellow in dark mode */
+}
+
+/* Optional: specifically target headings if needed */
+body {
+  /* For example, headings white in light mode */
+  --heading-color: white;
+}
+body.dark-mode {
+  --heading-color: yellow;
+}
+h1, h2, h3, h4, h5, h6, .text-huge-title, .text-pretitle {
+  color: var(--heading-color) !important;
+}
+
+   

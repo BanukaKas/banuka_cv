@@ -39,6 +39,31 @@
                     </ul>
                 </nav>
             </div>
+
+<button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle color mode">
+  <span id="icon-sun" style="display:inline;">
+    <!-- Sun SVG -->
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </span>
+  <span id="icon-moon" style="display:none;">
+    <!-- Moon SVG -->
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"></path>
+    </svg>
+  </span>
+</button>
+
+
         </header>
 
         <main class="s-content">
@@ -206,50 +231,155 @@
                 </div>
             </section>
 
-            <!-- Works Section (You can update images and modal content as needed) -->
             <section id="works" class="s-works target-section">
-                <div class="row works-portfolio">
-                    <div class="column lg-12" data-animate-block>
-                        <h2 class="text-pretitle" data-animate-el>Recent Works</h2>
-                        <p class="h1" data-animate-el>
-                            Here are some of my favorite projects I have done lately. Feel free to check them out.
-                        </p>
-                        <ul class="folio-list row block-lg-one-half block-stack-on-1000">
-                            <!-- Example project (update image paths and modal content as needed) -->
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-01">
-                                    <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/fuji.jpg"
-                                             srcset="images/portfolio/fuji.jpg 1x, images/portfolio/fuji@2x.jpg 2x"  alt="">
-                                    </div>
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">Web Application</div>
-                                        <div class="folio-list__item-title">Tourism Management System</div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" href="#" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                                </a>
-                            </li>
-                            <!-- Add more projects similarly -->
-                        </ul>
-                    </div>
-                    <!-- Modal Example (update as needed) -->
-                    <div id="modal-01" hidden>
-                        <div class="modal-popup">
-                            <img src="images/portfolio/gallery/g-fuji.jpg" alt="">
-                            <div class="modal-popup__desc">
-                                <h5>Tourism Management System</h5>
-                                <p>Developed the Guide Management function with CRUD operations, report generation, search, and PDF download features.</p>
-                                <ul class="modal-popup__cat">
-                                    <li>Web Application</li>
-                                </ul>
-                            </div>
-                            <a href="#" class="modal-popup__details">Project link</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
+  <div class="row works-portfolio">
+    <div class="column lg-12" data-animate-block>
+      <h2 class="text-pretitle" data-animate-el>Recent Works</h2>
+      <p class="h1" data-animate-el>
+        Here are some of my favorite projects I have done lately. Feel free to check them out.
+      </p>
+      <ul class="folio-list row block-lg-one-half block-stack-on-1000">
+        <!-- iwt_new -->
+        <li class="folio-list__item column" data-animate-el>
+          <a class="folio-list__item-link" href="https://github.com/BanukaKas/iwt_new" target="_blank">
+            <div class="folio-list__item-pic">
+              <img src="images/portfolio/fuji.jpg" srcset="images/portfolio/fuji.jpg 1x, images/portfolio/fuji@2x.jpg 2x" alt="iwt_new">
+            </div>
+            <div class="folio-list__item-text">
+              <div class="folio-list__item-cat">Web Application</div>
+              <div class="folio-list__item-title">iwt_new</div>
+            </div>
+          </a>
+          <a class="folio-list__proj-link" href="https://github.com/BanukaKas/iwt_new" target="_blank" title="View on GitHub">
+            <!-- GitHub icon svg -->
+          </a>
+        </li>
+        <!-- Tourism Management System -->
+        <li class="folio-list__item column" data-animate-el>
+          <a class="folio-list__item-link" href="https://github.com/BanukaKas/Tourism-management-system" target="_blank">
+            <div class="folio-list__item-pic">
+              <img src="images/portfolio/fuji.jpg" srcset="images/portfolio/fuji.jpg 1x, images/portfolio/fuji@2x.jpg 2x" alt="Tourism Management System">
+            </div>
+            <div class="folio-list__item-text">
+              <div class="folio-list__item-cat">Web Application</div>
+              <div class="folio-list__item-title">Tourism Management System</div>
+            </div>
+          </a>
+          <a class="folio-list__proj-link" href="https://github.com/BanukaKas/Tourism-management-system" target="_blank" title="View on GitHub">
+            <!-- GitHub icon svg -->
+          </a>
+        </li>
+        <!-- Gamage Recruiters -->
+        <li class="folio-list__item column" data-animate-el>
+          <a class="folio-list__item-link" href="https://github.com/BanukaKas/Gamage-Recruiters_Web" target="_blank">
+            <div class="folio-list__item-pic">
+              <img src="images/portfolio/fuji.jpg" srcset="images/portfolio/fuji.jpg 1x, images/portfolio/fuji@2x.jpg 2x" alt="Gamage Recruiters Web">
+            </div>
+            <div class="folio-list__item-text">
+              <div class="folio-list__item-cat">Web Application</div>
+              <div class="folio-list__item-title">Gamage Recruiters Web</div>
+            </div>
+          </a>
+          <a class="folio-list__proj-link" href="https://github.com/BanukaKas/Gamage-Recruiters_Web" target="_blank" title="View on GitHub">
+            <!-- GitHub icon svg -->
+          </a>
+        </li>
+        <!-- Client Management System -->
+        <li class="folio-list__item column" data-animate-el>
+          <a class="folio-list__item-link" href="https://github.com/BanukaKas/Client-Management-System-P2-main" target="_blank">
+            <div class="folio-list__item-pic">
+              <img src="images/portfolio/fuji.jpg" srcset="images/portfolio/fuji.jpg 1x, images/portfolio/fuji@2x.jpg 2x" alt="Client Management System">
+            </div>
+            <div class="folio-list__item-text">
+              <div class="folio-list__item-cat">Web Application</div>
+              <div class="folio-list__item-title">Client Management System</div>
+            </div>
+          </a>
+          <a class="folio-list__proj-link" href="https://github.com/BanukaKas/Client-Management-System-P2-main" target="_blank" title="View on GitHub">
+            <!-- GitHub icon svg -->
+          </a>
+        </li>
+        <!-- Meal Plan -->
+        <li class="folio-list__item column" data-animate-el>
+          <a class="folio-list__item-link" href="https://github.com/BanukaKas/mealplan" target="_blank">
+            <div class="folio-list__item-pic">
+              <img src="images/portfolio/fuji.jpg" srcset="images/portfolio/fuji.jpg 1x, images/portfolio/fuji@2x.jpg 2x" alt="Meal Plan">
+            </div>
+            <div class="folio-list__item-text">
+              <div class="folio-list__item-cat">Web Application</div>
+              <div class="folio-list__item-title">Meal Plan</div>
+            </div>
+          </a>
+          <a class="folio-list__proj-link" href="https://github.com/BanukaKas/mealplan" target="_blank" title="View on GitHub">
+            <!-- GitHub icon svg -->
+          </a>
+        </li>
+        <!-- Social Media Application -->
+        <li class="folio-list__item column" data-animate-el>
+          <a class="folio-list__item-link" href="https://github.com/BanukaKas/social_media_application" target="_blank">
+            <div class="folio-list__item-pic">
+              <img src="images/portfolio/fuji.jpg" srcset="images/portfolio/fuji.jpg 1x, images/portfolio/fuji@2x.jpg 2x" alt="Social Media Application">
+            </div>
+            <div class="folio-list__item-text">
+              <div class="folio-list__item-cat">Web Application</div>
+              <div class="folio-list__item-title">Social Media Application</div>
+            </div>
+          </a>
+          <a class="folio-list__proj-link" href="https://github.com/BanukaKas/social_media_application" target="_blank" title="View on GitHub">
+            <!-- GitHub icon svg -->
+          </a>
+        </li>
+        <!-- Login/Register -->
+        <li class="folio-list__item column" data-animate-el>
+          <a class="folio-list__item-link" href="https://github.com/BanukaKas/LOGIN_REGISTER" target="_blank">
+            <div class="folio-list__item-pic">
+              <img src="images/portfolio/fuji.jpg" srcset="images/portfolio/fuji.jpg 1x, images/portfolio/fuji@2x.jpg 2x" alt="LOGIN REGISTER">
+            </div>
+            <div class="folio-list__item-text">
+              <div class="folio-list__item-cat">Web Application</div>
+              <div class="folio-list__item-title">LOGIN_REGISTER</div>
+            </div>
+          </a>
+          <a class="folio-list__proj-link" href="https://github.com/BanukaKas/LOGIN_REGISTER" target="_blank" title="View on GitHub">
+            <!-- GitHub icon svg -->
+          </a>
+        </li>
+        <!-- Customer Application -->
+        <li class="folio-list__item column" data-animate-el>
+          <a class="folio-list__item-link" href="https://github.com/BanukaKas/customer-application-" target="_blank">
+            <div class="folio-list__item-pic">
+              <img src="images/portfolio/fuji.jpg" srcset="images/portfolio/fuji.jpg 1x, images/portfolio/fuji@2x.jpg 2x" alt="Customer Application">
+            </div>
+            <div class="folio-list__item-text">
+              <div class="folio-list__item-cat">Web Application</div>
+              <div class="folio-list__item-title">Customer Application</div>
+            </div>
+          </a>
+          <a class="folio-list__proj-link" href="https://github.com/BanukaKas/customer-application-" target="_blank" title="View on GitHub">
+            <!-- GitHub icon svg -->
+          </a>
+        </li>
+        <!-- Integration Web -->
+        <li class="folio-list__item column" data-animate-el>
+          <a class="folio-list__item-link" href="https://github.com/BanukaKas/Integration-web-" target="_blank">
+            <div class="folio-list__item-pic">
+              <img src="images/portfolio/fuji.jpg" srcset="images/portfolio/fuji.jpg 1x, images/portfolio/fuji@2x.jpg 2x" alt="Integration Web">
+            </div>
+            <div class="folio-list__item-text">
+              <div class="folio-list__item-cat">Web Application</div>
+              <div class="folio-list__item-title">Integration Web</div>
+            </div>
+          </a>
+          <a class="folio-list__proj-link" href="https://github.com/BanukaKas/Integration-web-" target="_blank" title="View on GitHub">
+            <!-- GitHub icon svg -->
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- Keep your modals here if needed -->
+  </div>
+</section>
+
 
             <!-- Contact Section -->
             <section id="contact" class="s-contact target-section">
@@ -275,7 +405,7 @@
                         <h3 class="text-pretitle">Social</h3>
                         <ul class="contact-social">
                             <li><a href="https://www.linkedin.com/in/banuka-lakshan-kasthuri-arachchi-/" target="_blank">LinkedIn</a></li>
-                            <li><a href="https://github.com/it21344756" target="_blank">GitHub</a></li>
+                            <li><a href="https://github.com/BanukaKas" target="_blank">GitHub</a></li>
                         </ul>
                     </div>
                     <div class="column lg-4 md-12 contact-block">
@@ -300,5 +430,44 @@
     </div>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.getElementById('theme-toggle');
+  const iconSun = document.getElementById('icon-sun');
+  const iconMoon = document.getElementById('icon-moon');
+
+  // Load saved theme preference
+  if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-mode');
+    iconSun.style.display = 'none';
+    iconMoon.style.display = 'inline';
+  } else {
+    // Light mode by default
+    iconSun.style.display = 'inline';
+    iconMoon.style.display = 'none';
+  }
+
+  btn.addEventListener('click', () => {
+    if (document.body.classList.contains('dark-mode')) {
+      // Switch to light mode (only text color changes)
+      document.body.classList.remove('dark-mode');
+      iconSun.style.display = 'inline';
+      iconMoon.style.display = 'none';
+      localStorage.setItem('theme', 'light');
+    } else {
+      // Switch to dark mode (only text color changes)
+      document.body.classList.add('dark-mode');
+      iconSun.style.display = 'none';
+      iconMoon.style.display = 'inline';
+      localStorage.setItem('theme', 'dark');
+    }
+  });
+});
+</script>
+
+
+
+
 </body>
 </html>
