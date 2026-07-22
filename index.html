@@ -12,13 +12,57 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
+    <style>
+        .project-highlights {
+            margin-top: 1.5rem;
+            padding-left: 1.2rem;
+        }
+        .project-highlights li {
+            margin-bottom: 0.75rem;
+        }
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-top: 1rem;
+        }
+        .tech-tags span {
+            display: inline-block;
+            padding: 0.45rem 0.8rem;
+            border: 1px solid currentColor;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            line-height: 1;
+        }
+        .project-metrics {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .metric-box {
+            padding: 1rem;
+            border: 1px solid rgba(128,128,128,0.25);
+            border-radius: 12px;
+            text-align: center;
+        }
+        .metric-box strong {
+            display: block;
+            font-size: 1.3rem;
+            margin-bottom: 0.25rem;
+        }
+        @media (max-width: 700px) {
+            .project-metrics {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body id="top">
 
     <div id="preloader"><div id="loader"></div></div>
 
     <div class="s-pagewrap">
-
         <div class="circles">
             <span></span><span></span><span></span><span></span><span></span>
         </div>
@@ -35,40 +79,35 @@
                         <li class="current"><a href="#intro" class="smoothscroll">Intro</a></li>
                         <li><a href="#about" class="smoothscroll">About</a></li>
                         <li><a href="#works" class="smoothscroll">Works</a></li>
+                        <li><a href="#research" class="smoothscroll">Research</a></li>
                         <li><a href="#contact" class="smoothscroll">Say Hello</a></li>
                     </ul>
                 </nav>
             </div>
 
-<button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle color mode">
-  <span id="icon-sun" style="display:inline;">
-    <!-- Sun SVG -->
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <circle cx="12" cy="12" r="5"></circle>
-      <line x1="12" y1="1" x2="12" y2="3"></line>
-      <line x1="12" y1="21" x2="12" y2="23"></line>
-      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-      <line x1="1" y1="12" x2="3" y2="12"></line>
-      <line x1="21" y1="12" x2="23" y2="12"></line>
-      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-    </svg>
-  </span>
-  <span id="icon-moon" style="display:none;">
-    <!-- Moon SVG -->
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"></path>
-    </svg>
-  </span>
-</button>
-
-
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle color mode">
+                <span id="icon-sun" style="display:inline;">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </span>
+                <span id="icon-moon" style="display:none;">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"></path>
+                    </svg>
+                </span>
+            </button>
         </header>
 
         <main class="s-content">
-
-            <!-- Intro Section -->
             <section id="intro" class="s-intro target-section">
                 <div class="row intro-content wide">
                     <div class="column">
@@ -82,8 +121,8 @@
                         </h1>
                     </div>
                     <ul class="intro-social">
-                        <li><a href="https://www.linkedin.com/in/banuka-lakshan-kasthuri-arachchi-/" target="_blank">LinkedIn</a></li>
-                        <li><a href="https://github.com/it21344756" target="_blank">GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/in/banuka-lakshan-kasthuri-arachchi-/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                        <li><a href="https://github.com/it21344756" target="_blank" rel="noopener noreferrer">GitHub</a></li>
                     </ul>
                 </div>
                 <a href="#about" class="intro-scrolldown smoothscroll">
@@ -91,12 +130,14 @@
                 </a>
             </section>
 
-            <!-- About Section -->
             <section id="about" class="s-about target-section">
                 <div class="row about-info wide" data-animate-block>
                     <div class="column lg-6 md-12 about-info__pic-block">
-                        <img src="images/about-photo.jpg" 
-                             srcset="images/about-photo.jpg 1x, images/about-photo@2x.jpg 2x" alt="" class="about-info__pic" data-animate-el>
+                        <img src="images/about-photo.jpg"
+                             srcset="images/about-photo.jpg 1x, images/about-photo@2x.jpg 2x"
+                             alt="Banuka Lakshan portrait"
+                             class="about-info__pic"
+                             data-animate-el>
                     </div>
                     <div class="column lg-6 md-12">
                         <div class="about-info__text">
@@ -104,7 +145,7 @@
                             <p class="attention-getter" data-animate-el>
                                 I'm eager to find an exciting internship in Information Technology. I am a highly motivated and hardworking person, dedicated to gaining a strong foundation in my field and a quick learner.
                             </p>
-                            <a href="Banuka_resume.pdf" class="btn btn--medium u-fullwidth" data-animate-el download>Download CV</a>
+                            <a href="Banuka_resume.pdf" class="btn btn--medium u-fullwidth" data-animate-el download="Banuka_Lakshan_CV.pdf">Download CV</a>
                         </div>
                     </div>
                 </div>
@@ -120,6 +161,7 @@
                             <li>Critical Thinking</li>
                             <li>Leadership</li>
                         </ul>
+
                         <h2 class="text-pretitle" data-animate-el>Technologies</h2>
                         <ul class="skills-list h1" data-animate-el>
                             <li>React</li>
@@ -134,12 +176,14 @@
                             <li>PHP</li>
                             <li>MySQL</li>
                         </ul>
+
                         <h2 class="text-pretitle" data-animate-el>Certificates</h2>
                         <ul class="skills-list h1" data-animate-el>
                             <li>Programming in Python - University of Moratuwa (2023)</li>
                             <li>Python Foundation - Great Learning Academy (2023)</li>
                             <li>Programming in Java - Great Learning Academy (2023)</li>
                         </ul>
+
                         <h2 class="text-pretitle" data-animate-el>Languages</h2>
                         <ul class="skills-list h1" data-animate-el>
                             <li>English (Fluent)</li>
@@ -147,13 +191,12 @@
                         </ul>
                     </div>
                 </div>
-                
+
                 <div class="row about-timelines" data-animate-block>
                     <div class="column lg-6 tab-12">
                         <h2 class="text-pretitle" data-animate-el>Experience</h2>
                         <div class="timeline" data-animate-el>
-
-                                <div class="timeline__block">
+                            <div class="timeline__block">
                                 <div class="timeline__bullet"></div>
                                 <div class="timeline__header">
                                     <h4 class="timeline__title">Software Engineer Intern</h4>
@@ -161,46 +204,12 @@
                                     <p class="timeline__timeframe">Sept 2024 – Mar 2025</p>
                                 </div>
                                 <div class="timeline__desc">
-                                    <p>
-                                        Worked as an integral part of the software development team, contributing to the development and maintenance of web applications. Responsibilities included assisting with interface design, debugging, and team collaboration. Demonstrated strong problem-solving skills, leadership potential, and met all deadlines efficiently.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="timeline__block">
-                                <div class="timeline__bullet"></div>
-                                <div class="timeline__header">
-                                    <h4 class="timeline__title">Tourism Management System</h4>
-                                    <h5 class="timeline__meta">Guide Management Developer</h5>
-                                    <p class="timeline__timeframe">2023</p>
-                                </div>
-                                <div class="timeline__desc">
-                                    <p>Developed the Guide Management function with CRUD operations, report generation, search, and PDF download features.</p>
-                                </div>
-                            </div>
-                            <div class="timeline__block">
-                                <div class="timeline__bullet"></div>
-                                <div class="timeline__header">
-                                    <h4 class="timeline__title">Home Service Provider Application</h4>
-                                    <h5 class="timeline__meta">User Management Developer</h5>
-                                    <p class="timeline__timeframe">2023</p>
-                                </div>
-                                <div class="timeline__desc">
-                                    <p>Developed the User Management module with full CRUD operations and password reset functionality.</p>
-                                </div>
-                            </div>
-                            <div class="timeline__block">
-                                <div class="timeline__bullet"></div>
-                                <div class="timeline__header">
-                                    <h4 class="timeline__title">Emp Android Application</h4>
-                                    <h5 class="timeline__meta">Developer</h5>
-                                    <p class="timeline__timeframe">2023</p>
-                                </div>
-                                <div class="timeline__desc">
-                                    <p>Created a small system for practice, implementing CRUD operations.</p>
+                                    <p>Worked as an integral part of the software development team, contributing to the development and maintenance of web applications. Responsibilities included assisting with interface design, debugging, and team collaboration.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="column lg-6 tab-12">
                         <h2 class="text-pretitle" data-animate-el>Education</h2>
                         <div class="timeline" data-animate-el>
@@ -232,163 +241,139 @@
             </section>
 
             <section id="works" class="s-works target-section">
-  <div class="row works-portfolio">
-    <div class="column lg-12" data-animate-block>
-      <h2 class="text-pretitle" data-animate-el>Recent Works</h2>
-      <p class="h1" data-animate-el>
-        Here are some of my favorite projects I have done lately. Feel free to check them out.
-      </p>
-      <ul class="folio-list row block-lg-one-half block-stack-on-1000">
-        <!-- iwt_new -->
-        <li class="folio-list__item column" data-animate-el>
-          <a class="folio-list__item-link" href="https://github.com/BanukaKas/iwt_new" target="_blank">
-            <div class="folio-list__item-pic">
-              <img src="images/portfolio/fuji.jpg" srcset="images/portfolio/fuji.jpg 1x, images/portfolio/fuji@2x.jpg 2x" alt="iwt_new">
-            </div>
-            <div class="folio-list__item-text">
-              <div class="folio-list__item-cat">Web Application</div>
-              <div class="folio-list__item-title">iwt_new</div>
-            </div>
-          </a>
-          <a class="folio-list__proj-link" href="https://github.com/BanukaKas/iwt_new" target="_blank" title="View on GitHub">
-            <!-- GitHub icon svg -->
-          </a>
-        </li>
-        <!-- Tourism Management System -->
-        <li class="folio-list__item column" data-animate-el>
-          <a class="folio-list__item-link" href="https://github.com/BanukaKas/Tourism-management-system" target="_blank">
-            <div class="folio-list__item-pic">
-              <img src="images/portfolio/fuji.jpg" srcset="images/portfolio/fuji.jpg 1x, images/portfolio/fuji@2x.jpg 2x" alt="Tourism Management System">
-            </div>
-            <div class="folio-list__item-text">
-              <div class="folio-list__item-cat">Web Application</div>
-              <div class="folio-list__item-title">Tourism Management System</div>
-            </div>
-          </a>
-          <a class="folio-list__proj-link" href="https://github.com/BanukaKas/Tourism-management-system" target="_blank" title="View on GitHub">
-            <!-- GitHub icon svg -->
-          </a>
-        </li>
-        <!-- Gamage Recruiters -->
-        <li class="folio-list__item column" data-animate-el>
-          <a class="folio-list__item-link" href="https://github.com/BanukaKas/Gamage-Recruiters_Web" target="_blank">
-            <div class="folio-list__item-pic">
-              <img src="images/portfolio/fuji.jpg" srcset="images/portfolio/fuji.jpg 1x, images/portfolio/fuji@2x.jpg 2x" alt="Gamage Recruiters Web">
-            </div>
-            <div class="folio-list__item-text">
-              <div class="folio-list__item-cat">Web Application</div>
-              <div class="folio-list__item-title">Gamage Recruiters Web</div>
-            </div>
-          </a>
-          <a class="folio-list__proj-link" href="https://github.com/BanukaKas/Gamage-Recruiters_Web" target="_blank" title="View on GitHub">
-            <!-- GitHub icon svg -->
-          </a>
-        </li>
-        <!-- Client Management System -->
-        <li class="folio-list__item column" data-animate-el>
-          <a class="folio-list__item-link" href="https://github.com/BanukaKas/Client-Management-System-P2-main" target="_blank">
-            <div class="folio-list__item-pic">
-              <img src="images/portfolio/fuji.jpg" srcset="images/portfolio/fuji.jpg 1x, images/portfolio/fuji@2x.jpg 2x" alt="Client Management System">
-            </div>
-            <div class="folio-list__item-text">
-              <div class="folio-list__item-cat">Web Application</div>
-              <div class="folio-list__item-title">Client Management System</div>
-            </div>
-          </a>
-          <a class="folio-list__proj-link" href="https://github.com/BanukaKas/Client-Management-System-P2-main" target="_blank" title="View on GitHub">
-            <!-- GitHub icon svg -->
-          </a>
-        </li>
-        <!-- Meal Plan -->
-        <li class="folio-list__item column" data-animate-el>
-          <a class="folio-list__item-link" href="https://github.com/BanukaKas/mealplan" target="_blank">
-            <div class="folio-list__item-pic">
-              <img src="images/portfolio/fuji.jpg" srcset="images/portfolio/fuji.jpg 1x, images/portfolio/fuji@2x.jpg 2x" alt="Meal Plan">
-            </div>
-            <div class="folio-list__item-text">
-              <div class="folio-list__item-cat">Web Application</div>
-              <div class="folio-list__item-title">Meal Plan</div>
-            </div>
-          </a>
-          <a class="folio-list__proj-link" href="https://github.com/BanukaKas/mealplan" target="_blank" title="View on GitHub">
-            <!-- GitHub icon svg -->
-          </a>
-        </li>
-        <!-- Social Media Application -->
-        <li class="folio-list__item column" data-animate-el>
-          <a class="folio-list__item-link" href="https://github.com/BanukaKas/social_media_application" target="_blank">
-            <div class="folio-list__item-pic">
-              <img src="images/portfolio/fuji.jpg" srcset="images/portfolio/fuji.jpg 1x, images/portfolio/fuji@2x.jpg 2x" alt="Social Media Application">
-            </div>
-            <div class="folio-list__item-text">
-              <div class="folio-list__item-cat">Web Application</div>
-              <div class="folio-list__item-title">Social Media Application</div>
-            </div>
-          </a>
-          <a class="folio-list__proj-link" href="https://github.com/BanukaKas/social_media_application" target="_blank" title="View on GitHub">
-            <!-- GitHub icon svg -->
-          </a>
-        </li>
-        <!-- Login/Register -->
-        <li class="folio-list__item column" data-animate-el>
-          <a class="folio-list__item-link" href="https://github.com/BanukaKas/LOGIN_REGISTER" target="_blank">
-            <div class="folio-list__item-pic">
-              <img src="images/portfolio/fuji.jpg" srcset="images/portfolio/fuji.jpg 1x, images/portfolio/fuji@2x.jpg 2x" alt="LOGIN REGISTER">
-            </div>
-            <div class="folio-list__item-text">
-              <div class="folio-list__item-cat">Web Application</div>
-              <div class="folio-list__item-title">LOGIN_REGISTER</div>
-            </div>
-          </a>
-          <a class="folio-list__proj-link" href="https://github.com/BanukaKas/LOGIN_REGISTER" target="_blank" title="View on GitHub">
-            <!-- GitHub icon svg -->
-          </a>
-        </li>
-        <!-- Customer Application -->
-        <li class="folio-list__item column" data-animate-el>
-          <a class="folio-list__item-link" href="https://github.com/BanukaKas/customer-application-" target="_blank">
-            <div class="folio-list__item-pic">
-              <img src="images/portfolio/fuji.jpg" srcset="images/portfolio/fuji.jpg 1x, images/portfolio/fuji@2x.jpg 2x" alt="Customer Application">
-            </div>
-            <div class="folio-list__item-text">
-              <div class="folio-list__item-cat">Web Application</div>
-              <div class="folio-list__item-title">Customer Application</div>
-            </div>
-          </a>
-          <a class="folio-list__proj-link" href="https://github.com/BanukaKas/customer-application-" target="_blank" title="View on GitHub">
-            <!-- GitHub icon svg -->
-          </a>
-        </li>
-        <!-- Integration Web -->
-        <li class="folio-list__item column" data-animate-el>
-          <a class="folio-list__item-link" href="https://github.com/BanukaKas/Integration-web-" target="_blank">
-            <div class="folio-list__item-pic">
-              <img src="images/portfolio/fuji.jpg" srcset="images/portfolio/fuji.jpg 1x, images/portfolio/fuji@2x.jpg 2x" alt="Integration Web">
-            </div>
-            <div class="folio-list__item-text">
-              <div class="folio-list__item-cat">Web Application</div>
-              <div class="folio-list__item-title">Integration Web</div>
-            </div>
-          </a>
-          <a class="folio-list__proj-link" href="https://github.com/BanukaKas/Integration-web-" target="_blank" title="View on GitHub">
-            <!-- GitHub icon svg -->
-          </a>
-        </li>
-      </ul>
-    </div>
-    <!-- Keep your modals here if needed -->
-  </div>
-</section>
+                <div class="row works-portfolio">
+                    <div class="column lg-12" data-animate-block>
+                        <h2 class="text-pretitle" data-animate-el>Recent Works</h2>
+                        <p class="h1" data-animate-el>
+                            Here are some of my favorite projects I have done lately. Feel free to check them out.
+                        </p>
+                        <ul class="folio-list row block-lg-one-half block-stack-on-1000">
+                            <li class="folio-list__item column" data-animate-el>
+                                <a class="folio-list__item-link" href="https://github.com/BanukaKas/iwt_new" target="_blank" rel="noopener noreferrer">
+                                    <div class="folio-list__item-pic">
+                                        <img src="images/portfolio/fuji.jpg" srcset="images/portfolio/fuji.jpg 1x, images/portfolio/fuji@2x.jpg 2x" alt="iwt_new">
+                                    </div>
+                                    <div class="folio-list__item-text">
+                                        <div class="folio-list__item-cat">Web Application</div>
+                                        <div class="folio-list__item-title">iwt_new</div>
+                                    </div>
+                                </a>
+                            </li>
 
+                            <li class="folio-list__item column" data-animate-el>
+                                <a class="folio-list__item-link" href="https://github.com/BanukaKas/Tourism-management-system" target="_blank" rel="noopener noreferrer">
+                                    <div class="folio-list__item-pic">
+                                        <img src="images/portfolio/fuji.jpg" srcset="images/portfolio/fuji.jpg 1x, images/portfolio/fuji@2x.jpg 2x" alt="Tourism Management System">
+                                    </div>
+                                    <div class="folio-list__item-text">
+                                        <div class="folio-list__item-cat">Web Application</div>
+                                        <div class="folio-list__item-title">Tourism Management System</div>
+                                    </div>
+                                </a>
+                            </li>
 
-            <!-- Contact Section -->
+                            <li class="folio-list__item column" data-animate-el>
+                                <a class="folio-list__item-link" href="https://github.com/BanukaKas/Gamage-Recruiters_Web" target="_blank" rel="noopener noreferrer">
+                                    <div class="folio-list__item-pic">
+                                        <img src="images/portfolio/fuji.jpg" srcset="images/portfolio/fuji.jpg 1x, images/portfolio/fuji@2x.jpg 2x" alt="Gamage Recruiters Web">
+                                    </div>
+                                    <div class="folio-list__item-text">
+                                        <div class="folio-list__item-cat">Web Application</div>
+                                        <div class="folio-list__item-title">Gamage Recruiters Web</div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="folio-list__item column" data-animate-el>
+                                <a class="folio-list__item-link" href="https://github.com/BanukaKas/Client-Management-System-P2-main" target="_blank" rel="noopener noreferrer">
+                                    <div class="folio-list__item-pic">
+                                        <img src="images/portfolio/fuji.jpg" srcset="images/portfolio/fuji.jpg 1x, images/portfolio/fuji@2x.jpg 2x" alt="Client Management System">
+                                    </div>
+                                    <div class="folio-list__item-text">
+                                        <div class="folio-list__item-cat">Web Application</div>
+                                        <div class="folio-list__item-title">Client Management System</div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="research" class="s-works target-section">
+                <div class="row works-portfolio">
+                    <div class="column lg-12" data-animate-block>
+                        <h2 class="text-pretitle" data-animate-el>Research Project</h2>
+                        <p class="h1" data-animate-el>
+                            Smart Aquarium Management System (SAMS) is my final-year capstone project focused on AI-powered fish disease detection and aquarium health management.
+                        </p>
+
+                        <div class="timeline" data-animate-el>
+                            <div class="timeline__block">
+                                <div class="timeline__bullet"></div>
+                                <div class="timeline__header">
+                                    <h4 class="timeline__title">Smart Aquarium Management System (SAMS)</h4>
+                                    <h5 class="timeline__meta">AI-Powered Fish Disease Detection & Aquarium Management Platform</h5>
+                                    <p class="timeline__timeframe">2024 – 2025</p>
+                                </div>
+                                <div class="timeline__desc">
+                                    <p>
+                                        An AI-powered mobile application developed as my final-year capstone research project.
+                                        It enables real-time fish disease detection using computer vision, supports post-mortem diagnosis,
+                                        and provides intelligent treatment recommendations to improve aquarium health management.
+                                    </p>
+
+                                    <div class="tech-tags">
+                                        <span>YOLOv11</span>
+                                        <span>PyTorch</span>
+                                        <span>React Native</span>
+                                        <span>Flask</span>
+                                        <span>Node.js</span>
+                                        <span>Express.js</span>
+                                        <span>Python</span>
+                                    </div>
+
+                                    <ul class="project-highlights">
+                                        <li>Real-time fish disease detection using a custom-trained YOLOv11 model.</li>
+                                        <li>AI-powered post-mortem diagnosis based on visible symptoms.</li>
+                                        <li>Treatment recommendations, quarantine alerts, and water quality suggestions.</li>
+                                        <li>Cross-platform mobile application built with React Native.</li>
+                                        <li>REST APIs developed with Flask and Node.js.</li>
+                                    </ul>
+
+                                    <div class="project-metrics">
+                                        <div class="metric-box">
+                                            <strong>88.6%</strong>
+                                            <span>Detection mAP</span>
+                                        </div>
+                                        <div class="metric-box">
+                                            <strong>70%</strong>
+                                            <span>Diagnosis Accuracy</span>
+                                        </div>
+                                        <div class="metric-box">
+                                            <strong>&lt; 2s</strong>
+                                            <span>Inference Time</span>
+                                        </div>
+                                    </div>
+
+                                    <div style="margin-top: 1.5rem;">
+                                        <a href="https://github.com/" class="btn btn--medium" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                        <a href="https://example.com/" class="btn btn--medium" target="_blank" rel="noopener noreferrer">Research Paper</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section id="contact" class="s-contact target-section">
                 <div class="row contact-top">
                     <div class="column lg-12">
                         <h2 class="text-pretitle">Get In Touch</h2>
                         <p class="h1">
                             I love to hear from you.
-                            Whether you have a question or just 
+                            Whether you have a question or just
                             want to chat about tech — shoot me a message.
                         </p>
                     </div>
@@ -404,8 +389,8 @@
                     <div class="column lg-4 md-5 tab-6 stack-on-550 contact-block">
                         <h3 class="text-pretitle">Social</h3>
                         <ul class="contact-social">
-                            <li><a href="https://www.linkedin.com/in/banuka-lakshan-kasthuri-arachchi-/" target="_blank">LinkedIn</a></li>
-                            <li><a href="https://github.com/BanukaKas" target="_blank">GitHub</a></li>
+                            <li><a href="https://www.linkedin.com/in/banuka-lakshan-kasthuri-arachchi-/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                            <li><a href="https://github.com/BanukaKas" target="_blank" rel="noopener noreferrer">GitHub</a></li>
                         </ul>
                     </div>
                     <div class="column lg-4 md-12 contact-block">
@@ -428,46 +413,39 @@
             </div>
         </footer>
     </div>
+
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const btn = document.getElementById('theme-toggle');
-  const iconSun = document.getElementById('icon-sun');
-  const iconMoon = document.getElementById('icon-moon');
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const btn = document.getElementById('theme-toggle');
+        const iconSun = document.getElementById('icon-sun');
+        const iconMoon = document.getElementById('icon-moon');
 
-  // Load saved theme preference
-  if (localStorage.getItem('theme') === 'dark') {
-    document.body.classList.add('dark-mode');
-    iconSun.style.display = 'none';
-    iconMoon.style.display = 'inline';
-  } else {
-    // Light mode by default
-    iconSun.style.display = 'inline';
-    iconMoon.style.display = 'none';
-  }
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+            iconSun.style.display = 'none';
+            iconMoon.style.display = 'inline';
+        } else {
+            iconSun.style.display = 'inline';
+            iconMoon.style.display = 'none';
+        }
 
-  btn.addEventListener('click', () => {
-    if (document.body.classList.contains('dark-mode')) {
-      // Switch to light mode (only text color changes)
-      document.body.classList.remove('dark-mode');
-      iconSun.style.display = 'inline';
-      iconMoon.style.display = 'none';
-      localStorage.setItem('theme', 'light');
-    } else {
-      // Switch to dark mode (only text color changes)
-      document.body.classList.add('dark-mode');
-      iconSun.style.display = 'none';
-      iconMoon.style.display = 'inline';
-      localStorage.setItem('theme', 'dark');
-    }
-  });
-});
-</script>
-
-
-
-
+        btn.addEventListener('click', () => {
+            if (document.body.classList.contains('dark-mode')) {
+                document.body.classList.remove('dark-mode');
+                iconSun.style.display = 'inline';
+                iconMoon.style.display = 'none';
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.body.classList.add('dark-mode');
+                iconSun.style.display = 'none';
+                iconMoon.style.display = 'inline';
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+    });
+    </script>
 </body>
 </html>
